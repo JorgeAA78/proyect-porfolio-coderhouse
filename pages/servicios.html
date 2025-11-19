@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.5">
+    <title>Portfolio-Servicios</title>
+
+    <!-- Tipografía -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+</head>
+
+<body class="body">
+    <header class="header">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../assets/img/logo negro.png" alt="Jorge Altamirano Logo" height="40">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav ms-auto">
+                        <a class="nav-link" href="../index.html">Inicio</a>
+                        <a class="nav-link" href="./sobre-mi.html">Sobre mí</a>
+                        <a class="nav-link" href="./portfolio.html">Portfolio</a>
+                        <a class="nav-link active" aria-current="page" href="./servicios.html">Servicios</a>
+                        <a class="nav-link" href="./contacto.html">Contacto</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="header-content text-center py-4">
+            <h1 class="header__title">Servicios</h1>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="service" aria-labelledby="servicios-titulo">
+            <h2 id="servicios-titulo" class="service__title">Qué ofrezco</h2>
+
+            <article class="service__item">
+                <h3 class="service__subtitle">Maquetado Semántico</h3>
+                <p>Estructura HTML5 clara y accesible, ideal para SEO y mantenimiento.</p>
+            </article>
+
+            <article class="service__item">
+                <h3 class="service__subtitle">Estilos CSS Base</h3>
+                <p>Tipografías, colores y jerarquía visual sin frameworks pesados.</p>
+            </article>
+
+            <article class="service__item">
+                <h3 class="service__subtitle">Revisión de Accesibilidad</h3>
+                <p>Etiquetas, nombre-rol-valor, orden de lectura y textos alternativos.</p>
+            </article>
+
+            <section class="process" aria-labelledby="proceso-titulo">
+                <h3 id="proceso-titulo" class="process__title">Proceso de trabajo</h3>
+                <ol class="process__list">
+                    <li>Brief y alcance</li>
+                    <li>Wireframe y estructura semántica</li>
+                    <li>Estilos base y ajustes de contenido</li>
+                    <li>Entrega y documentación</li>
+                </ol>
+            </section>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <img src="../assets/img/logo negro.png" alt="Jorge Altamirano Logo" class="footer__logo">
+            <ul class="footer__social">
+                <li>
+                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="footer__social-link"
+                        aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="footer__social-link"
+                        aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
+                        class="footer__social-link" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </li>
+            </ul>
+            <a href="./contacto.html" class="footer__contact">contáctame &gt;</a>
+        </div>
+        <p class="footer__text">&copy; <time datetime="2025">2025</time> Jorge Altamirano. Todos los derechos
+            reservados.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
