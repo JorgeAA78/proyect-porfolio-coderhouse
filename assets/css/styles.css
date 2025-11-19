@@ -174,7 +174,7 @@ video, img { display: block; }
 }
 
 .intro__caption {
-  color: var(--muted);
+  color: var(--tinta);
   font-size: 0.95rem;
   text-align: center;
   margin-top: 10px;
