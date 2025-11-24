@@ -91,6 +91,12 @@ button:hover { text-decoration: underline; }
 /*  Multimedia */
 video, img { display: block; }
 
+/* Contenedor del chat n8n */
+#n8n-chat {
+  max-height: 70vh;
+  height: 70vh;
+}
+
 /* Accesibilidad */
 .skip {
   position: static;
