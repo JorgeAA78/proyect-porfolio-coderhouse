@@ -468,3 +468,71 @@ video, img { display: block; }
     text-align: right;
   }
 }
+/* === Chat flotante n8n === */
+
+/* Botón flotante */
+#chat-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--acento);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 9999;
+  transition: transform 0.2s ease-in-out;
+}
+
+#chat-toggle:hover {
+  transform: scale(1.05);
+}
+
+#chat-toggle img {
+  width: 32px;
+  height: 32px;
+}
+
+/* Ventana del chat */
+#chat-box {
+  position: fixed;
+  bottom: 95px;
+  right: 20px;
+  width: 350px;
+  height: 500px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+  overflow: hidden;
+  display: none;
+  flex-direction: column;
+  z-index: 9999;
+  animation: fadeIn .25s ease-in-out;
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+  from { 
+    opacity: 0; 
+    transform: translateY(10px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+/* Ajuste para mobile */
+@media (max-width: 576px) {
+  #chat-box {
+    width: 100%;
+    height: 85%;
+    bottom: 0;
+    right: 0;
+    border-radius: 0;
+  }
+}

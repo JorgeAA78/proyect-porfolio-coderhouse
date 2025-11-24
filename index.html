@@ -154,18 +154,12 @@
         <p class="footer__text">&copy; <time datetime="2025">2025</time> Jorge Altamirano. Todos los derechos
             reservados.</p>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
     <script type="module">
         import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
 
         createChat({
             webhookUrl: 'https://n8ncurso2025-n8n.mos4xj.easypanel.host/webhook/4623630c-0aab-4bf4-9096-9699fab72a42/chat',
-            webhookConfig: {
-                method: 'POST',
-                headers: {}
-            },
+            webhookConfig: { method: 'POST' },
             chatInputKey: 'chatInput',
             chatSessionKey: 'sessionId',
             loadPreviousSession: true,
@@ -173,27 +167,29 @@
             showWelcomeScreen: false,
             defaultLanguage: 'es',
             initialMessages: [
-                ['Hola!', 'Mi nombre es Jor. Como te puedo ayudar hoy?']
+                '¡Hola!',
+                'Soy Ai Jor, el asistente virtual del protfolio de Jorge. ¿En qué puedo ayudarte hoy?'
             ],
             i18n: {
-                en: {
-                    title: 'Hola! ',
-                    subtitle: "Inicia un chat. Estoy aqui para ayudarte 24/7.",
-                    footer: '',
-                    getStarted: 'Nueva conversación',
-                    inputPlaceholder: 'Escribe tu consulta...',
-                },
                 es: {
-                    title: 'Hola! ',
-                    subtitle: "Inicia un chat. Estoy aquí para ayudarte 24/7.",
+                    title: '¡Hola!',
+                    subtitle: "Estoy aquí para ayudarte 24/7.",
                     footer: '',
                     getStarted: 'Nueva conversación',
                     inputPlaceholder: 'Escribe tu consulta...',
-                },
+                }
             },
-            enableStreaming: false,
+        });
+
+        const toggle = document.getElementById('chat-toggle');
+        const chatBox = document.getElementById('chat-box');
+
+        toggle.addEventListener('click', () => {
+            chatBox.style.display = chatBox.style.display === 'flex' ? 'none' : 'flex';
         });
     </script>
+
+
 </body>
 
 </html>
