@@ -1,0 +1,48 @@
+// ============================================
+// RESET Y NORMALIZACIÓN
+// ============================================
+@use '../abstracts' as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: dark light;
+  background: $color-fondo;
+  scroll-behavior: smooth;
+}
+
+body,
+.body {
+  background: $color-fondo;
+  color: $color-tinta;
+  font-family: $font-family-base;
+  font-weight: $font-weight-normal;
+  line-height: $line-height-base;
+}
+
+// Multimedia responsive
+video,
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+// Listas sin estilo por defecto
+ul,
+ol {
+  color: $color-tinta;
+}
+
+// Accesibilidad - skip link
+.skip {
+  position: static;
+  display: inline-block;
+  background: $color-acento;
+  color: #000;
+  text-decoration: none;
+}

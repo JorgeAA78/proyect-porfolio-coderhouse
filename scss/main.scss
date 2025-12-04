@@ -1,0 +1,34 @@
+// ============================================
+// MAIN.SCSS - Archivo principal SASS
+// ============================================
+// Arquitectura 7-1 adaptada para el proyecto
+// ============================================
+
+// --------------------------------------------
+// ABSTRACTS - Variables y Mixins
+// Deben cargarse primero para estar disponibles
+// --------------------------------------------
+@use 'abstracts' as *;
+
+// --------------------------------------------
+// BASE - Reset y tipografía base
+// --------------------------------------------
+@use 'base';
+
+// --------------------------------------------
+// LAYOUT - Estructura principal
+// Header, Footer, Grid
+// --------------------------------------------
+@use 'layout';
+
+// --------------------------------------------
+// COMPONENTS - Componentes reutilizables
+// Botones, Cards, Forms, Navigation
+// --------------------------------------------
+@use 'components';
+
+// --------------------------------------------
+// PAGES - Estilos específicos de páginas
+// Home, About, Contact, Portfolio, Services
+// --------------------------------------------
+@use 'pages';

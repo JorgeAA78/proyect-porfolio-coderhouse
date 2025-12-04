@@ -1,0 +1,90 @@
+// ============================================
+// LAYOUT: GRID Y CONTENEDORES
+// ============================================
+@use '../abstracts' as *;
+
+// Contenedor principal
+.container,
+.container-fluid {
+  @include container;
+}
+
+// Contenedor secundario
+.content-wrapper {
+  @include container;
+}
+
+// Main section
+.main {
+  background: $color-fondo-suave;
+  min-height: 80vh;
+  padding: $spacing-3xl $spacing-lg $spacing-5xl;
+}
+
+// Galería con Grid
+.gallery {
+  @include grid(1, $spacing-3xl);
+  padding: $spacing-lg;
+
+  @include respond-to('md') {
+    @include grid(2, $spacing-2xl);
+  }
+
+  &__title {
+    color: $color-tinta;
+    font-weight: $font-weight-bold;
+    text-align: center;
+    margin-bottom: $spacing-2xl;
+    grid-column: 1 / -1;
+  }
+}
+
+// Grid de servicios
+.service {
+  display: grid;
+  row-gap: $spacing-xl + 4px; // Operador SASS
+  column-gap: $spacing-xl;
+  padding: $spacing-2xl + 2px $spacing-lg;
+
+  @include respond-to('md') {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @include respond-to('lg') {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  &__title {
+    color: $color-tinta;
+    text-align: center;
+    margin-bottom: $spacing-xs;
+    grid-column: 1 / -1;
+  }
+
+  &__subtitle {
+    color: $color-tinta;
+  }
+}
+
+// Proceso
+.process {
+  background: $color-fondo-suave;
+  padding: ($spacing-lg + 2px) $spacing-lg;
+  border-radius: $radius-lg;
+  grid-column: 1 / -1;
+
+  &__title {
+    color: $color-tinta;
+    margin-bottom: $spacing-sm;
+  }
+
+  &__list {
+    display: grid;
+    gap: $spacing-xs;
+    padding-left: 1.25rem;
+
+    @include respond-to('md') {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+}

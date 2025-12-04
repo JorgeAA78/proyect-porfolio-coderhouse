@@ -1,0 +1,96 @@
+// ============================================
+// VARIABLES SASS
+// ============================================
+
+// Colores principales
+$color-fondo: #0d1117;
+$color-tinta: #e6edf3;
+$color-acento: #58a6ff;
+$color-muted: #8b949e;
+$color-fondo-suave: #161b22;
+
+// Colores secundarios
+$color-success: #25d366;
+$color-footer-bg: #f8f9fa;
+$color-footer-text: #212529;
+$color-footer-muted: #6c757d;
+$color-border: #dee2e6;
+
+// Tipografía
+$font-family-base: "Roboto", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+$line-height-base: 1.6;
+$line-height-relaxed: 1.8;
+
+// Tamaños de fuente
+$font-size-xs: 0.8rem;
+$font-size-sm: 0.9rem;
+$font-size-base: 1rem;
+$font-size-md: 0.95rem;
+$font-size-lg: 1.1rem;
+$font-size-xl: 1.5rem;
+
+// Espaciado (usando escala de 8px)
+$spacing-xs: 8px;
+$spacing-sm: 12px;
+$spacing-md: 16px;
+$spacing-lg: 20px;
+$spacing-xl: 24px;
+$spacing-2xl: 30px;
+$spacing-3xl: 40px;
+$spacing-4xl: 50px;
+$spacing-5xl: 60px;
+
+// Border radius
+$radius-sm: 8px;
+$radius-md: 10px;
+$radius-lg: 12px;
+$radius-xl: 15px;
+$radius-full: 50%;
+
+// Sombras
+$shadow-sm: 0 4px 8px rgba(0, 0, 0, 0.1);
+$shadow-md: 0 4px 12px rgba(0, 0, 0, 0.2);
+$shadow-lg: 0 8px 20px rgba($color-acento, 0.4);
+$shadow-whatsapp: 0 4px 12px rgba($color-success, 0.4);
+$shadow-whatsapp-hover: 0 6px 16px rgba($color-success, 0.5);
+
+// Breakpoints para responsive
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1200px;
+
+// Anchos máximos de contenedores
+$container-sm: 800px;
+$container-md: 1000px;
+$container-lg: 1200px;
+
+// Transiciones
+$transition-fast: 0.2s ease;
+$transition-base: 0.3s ease;
+
+// Z-index
+$z-index-dropdown: 100;
+$z-index-sticky: 500;
+$z-index-fixed: 999;
+$z-index-modal: 1000;
+
+// Mapa de colores para redes sociales (usado con @each)
+$social-colors: (
+  'twitter': #1da1f2,
+  'facebook': #1877f2,
+  'instagram': #e4405f,
+  'linkedin': #0a66c2,
+  'whatsapp': #25d366
+);
+
+// Mapa de espaciados para generar clases utilitarias
+$spacing-sizes: (
+  'xs': $spacing-xs,
+  'sm': $spacing-sm,
+  'md': $spacing-md,
+  'lg': $spacing-lg,
+  'xl': $spacing-xl
+);

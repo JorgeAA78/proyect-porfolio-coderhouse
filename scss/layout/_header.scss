@@ -1,0 +1,34 @@
+// ============================================
+// LAYOUT: HEADER
+// ============================================
+@use '../abstracts' as *;
+
+.header {
+  background: $color-fondo-suave;
+  text-align: center;
+
+  &__title {
+    color: $color-tinta;
+    font-weight: $font-weight-bold;
+  }
+
+  &__subtitle {
+    color: $color-muted;
+    font-style: italic;
+  }
+}
+
+// Secciones base
+header,
+main {
+  background: $color-fondo-suave;
+}
+
+// Logo del navbar - mantener tamaño original
+.navbar-brand {
+  img {
+    height: 40px;
+    width: auto;
+    max-width: 150px;
+  }
+}

@@ -1,0 +1,52 @@
+// ============================================
+// COMPONENTE: FORMULARIOS
+// ============================================
+@use '../abstracts' as *;
+
+// Placeholder para inputs
+%input-base {
+  border: 1px solid $color-muted;
+  border-radius: $radius-sm;
+  padding: $spacing-sm;
+  background: $color-fondo;
+  font: inherit;
+  color: inherit;
+  @include transition(border-color $transition-fast, outline $transition-fast);
+
+  &:focus {
+    outline: 2px solid $color-acento;
+    border-color: $color-acento;
+  }
+}
+
+// Contenedor de formulario
+.form {
+  @include flex-column($spacing-sm);
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+// Inputs y textareas
+.form__input,
+.form__textarea {
+  @extend %input-base;
+}
+
+.form__textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+// Labels
+label {
+  font: inherit;
+  color: inherit;
+  background: transparent;
+}
+
+input,
+textarea {
+  font: inherit;
+  color: inherit;
+  background: transparent;
+}

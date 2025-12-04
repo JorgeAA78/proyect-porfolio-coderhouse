@@ -1,0 +1,26 @@
+// ============================================
+// PÁGINA: SERVICIOS
+// ============================================
+@use '../abstracts' as *;
+
+// Los estilos de grid de servicios están en layout/_grid.scss
+// Los estilos de tarjetas de servicio están en components/_cards.scss
+
+// Estilos específicos de la página servicios
+.services {
+  &__intro {
+    text-align: center;
+    margin-bottom: $spacing-3xl;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__cta {
+    text-align: center;
+    margin-top: $spacing-4xl;
+    padding: $spacing-3xl;
+    background: $color-fondo;
+    border-radius: $radius-lg;
+  }
+}

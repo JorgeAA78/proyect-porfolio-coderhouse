@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="es">
 
+<!-- ==================== HEAD ==================== -->
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,14 +14,16 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <!-- CSS -->
-    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
     <!-- Font Awesome para iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+<!-- ==================== FIN HEAD ==================== -->
 
 <body class="body">
+    <!-- Inicio Header -->
     <header class="header">
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
@@ -48,40 +51,54 @@
             <h1 class="header__title">Contacto</h1>
         </div>
     </header>
+    <!-- Fin Header -->
 
+    <!-- ==================== INICIO MAIN ==================== -->
     <main class="main">
         <section class="contact" aria-labelledby="contacto-titulo">
             <h2 id="contacto-titulo" class="contact__title">Escribime</h2>
             <p class="contact__intro">Completá el formulario o elegí uno de los medios de contacto listados:</p>
 
-            <ul class="contact__list">
-                <li>
-                    <img src="../assets/img/gmail blanco.svg" alt="Gmail" class="contact__icon">
-                    <a href="mailto:grisjaa@gmail.com" class="contact__link">grisjaa@gmail.com</a>
-                </li>
-                <li>
-                    <img src="../assets/img/inkedin blanco.svg" alt="LinkedIn" class="contact__icon">
-                    <a href="https://www.linkedin.com/in/jorge-a-altamirano/" target="_blank" class="contact__link">Mi
-                        perfil</a>
-                </li>
-            </ul>
+            <!-- Wrapper Flexbox para distribuir contenido -->
+            <div class="contact__wrapper">
+                <!-- Informacion de contacto -->
+                <div class="contact__info">
+                    <h3>Datos de contacto</h3>
+                    <ul class="contact__list">
+                        <li>
+                            <img src="../assets/img/gmail blanco.svg" alt="Gmail" class="contact__icon">
+                            <a href="mailto:grisjaa@gmail.com" class="contact__link">grisjaa@gmail.com</a>
+                        </li>
+                        <li>
+                            <img src="../assets/img/inkedin blanco.svg" alt="LinkedIn" class="contact__icon">
+                            <a href="https://www.linkedin.com/in/jorge-a-altamirano/" target="_blank" class="contact__link">Mi perfil en LinkedIn</a>
+                        </li>
+                    </ul>
+                    <p class="contact__availability">Disponible de lunes a viernes, de 9:00 a 18:00 hs.</p>
+                </div>
 
-            <form class="form" action="#" method="post" aria-describedby="ayuda-form">
-                <p id="ayuda-form" class="form__help">Los campos marcados con * son obligatorios.</p>
+                <!-- Formulario de contacto -->
+                <div class="contact__form-container">
+                    <h3>Enviar mensaje</h3>
+                    <form class="form" action="#" method="post" aria-describedby="ayuda-form">
+                        <p id="ayuda-form" class="form__help">Los campos marcados con * son obligatorios.</p>
 
-                <label for="nombre" class="form__label">Nombre *</label>
-                <input id="nombre" name="nombre" type="text" class="form__input" required>
+                        <label for="nombre" class="form__label">Nombre *</label>
+                        <input id="nombre" name="nombre" type="text" class="form__input" required>
 
-                <label for="email" class="form__label">Email *</label>
-                <input id="email" name="email" type="email" class="form__input" required>
+                        <label for="email" class="form__label">Email *</label>
+                        <input id="email" name="email" type="email" class="form__input" required>
 
-                <label for="mensaje" class="form__label">Mensaje *</label>
-                <textarea id="mensaje" name="mensaje" rows="6" class="form__textarea" required></textarea>
+                        <label for="mensaje" class="form__label">Mensaje *</label>
+                        <textarea id="mensaje" name="mensaje" rows="6" class="form__textarea" required></textarea>
 
-                <button type="submit" class="form__button">Enviar</button>
-            </form>
+                        <button type="submit" class="form__button">Enviar</button>
+                    </form>
+                </div>
+            </div>
         </section>
     </main>
+    <!-- ==================== FIN MAIN ==================== -->
 
     <footer class="footer">
         <div class="footer__container">
@@ -111,6 +128,9 @@
         <p class="footer__text">&copy; <time datetime="2025">2025</time> Jorge Altamirano. Todos los derechos
             reservados.</p>
     </footer>
+    <!-- ==================== FIN FOOTER ==================== -->
+
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>

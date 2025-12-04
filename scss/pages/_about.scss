@@ -1,0 +1,77 @@
+// ============================================
+// PÁGINA: SOBRE MÍ
+// ============================================
+@use '../abstracts' as *;
+
+.profile {
+  @include container($container-md);
+  padding: $spacing-lg;
+
+  &__content-wrapper {
+    @include flex-column($spacing-2xl);
+    align-items: center;
+
+    @include respond-to('md') {
+      @include flex-row($spacing-4xl);
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__figure {
+    @include respond-to('md') {
+      flex: 0 0 320px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__info {
+    @include respond-to('md') {
+      flex: 1;
+      text-align: left;
+    }
+  }
+
+  &__image {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    border-radius: $radius-lg + 8px; // Operador SASS
+    @include transition(transform $transition-base, box-shadow $transition-base);
+    box-shadow: $shadow-sm;
+
+    &:hover {
+      @include hover-scale;
+      box-shadow: 0 8px 16px rgba($color-acento, 0.3);
+    }
+  }
+
+  &__title {
+    margin-bottom: $spacing-md;
+  }
+
+  &__text {
+    margin-bottom: $spacing-lg;
+    line-height: $line-height-relaxed;
+  }
+
+  &__section {
+    margin-top: $spacing-3xl;
+    padding: $spacing-lg;
+    background: $color-fondo;
+    border-radius: $radius-lg;
+    animation: slideInRight 0.5s ease-out;
+  }
+
+  &__subtitle {
+    margin-bottom: $spacing-sm;
+  }
+
+  &__list {
+    padding-left: $spacing-lg;
+
+    li {
+      margin-bottom: $spacing-xs;
+    }
+  }
+}

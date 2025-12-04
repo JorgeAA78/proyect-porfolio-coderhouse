@@ -1,0 +1,122 @@
+// ============================================
+// PÁGINA: HOME (INDEX)
+// ============================================
+@use '../abstracts' as *;
+
+// Sección Intro
+.intro {
+  @include container;
+
+  &__title {
+    color: $color-tinta;
+    font-weight: $font-weight-bold;
+    text-align: center;
+    margin-bottom: $spacing-md;
+    animation: fadeIn 0.6s ease-out;
+  }
+
+  &__text {
+    text-align: center;
+    margin-top: $spacing-xs;
+    margin-bottom: $spacing-3xl;
+  }
+
+  &__figure {
+    @include flex-column($spacing-md);
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+    max-height: 450px;
+    object-fit: contain;
+    border-radius: $radius-md;
+    box-shadow: $shadow-sm;
+    display: block;
+    margin: 0 auto;
+    @include transition(transform $transition-base, box-shadow $transition-base);
+
+    &:hover {
+      transform: scale(1.02);
+      box-shadow: $shadow-md;
+    }
+  }
+
+  &__caption {
+    color: $color-tinta;
+    font-size: $font-size-md;
+    text-align: center;
+    margin-top: $spacing-md;
+  }
+}
+
+// Sección Proyecto Destacado
+.project {
+  @include grid(1, $spacing-lg);
+  margin-bottom: $spacing-4xl;
+  padding: $spacing-2xl 0;
+
+  &__title {
+    color: $color-tinta;
+    text-align: center;
+    margin-bottom: $spacing-2xl;
+  }
+
+  &__text {
+    color: $color-tinta;
+    margin-top: $spacing-md;
+  }
+
+  &__video {
+    display: block;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: $radius-md;
+  }
+}
+
+// Sección CTA
+.cta {
+  background: $color-fondo;
+  padding: $spacing-4xl $spacing-lg;
+  text-align: center;
+  margin-top: $spacing-3xl;
+  border-radius: $radius-lg;
+  animation: fadeIn 0.5s ease-out;
+
+  &__title {
+    margin-bottom: $spacing-md;
+    font-size: $font-size-xl;
+  }
+
+  &__text {
+    margin-bottom: $spacing-xl;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+// Testimonios
+.testimonials {
+  background-color: $color-fondo;
+  border-top: 1px solid $color-muted;
+  padding: $spacing-3xl 0;
+}
+
+.blockquote {
+  font-style: italic;
+  color: $color-tinta;
+}
+
+.blockquote-footer {
+  color: $color-muted;
+}
+
+// Chat widget
+#n8n-chat {
+  @include floating-button;
+  z-index: $z-index-modal;
+}

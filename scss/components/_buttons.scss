@@ -1,0 +1,108 @@
+// ============================================
+// COMPONENTE: BOTONES
+// ============================================
+@use '../abstracts' as *;
+
+// Botón base (placeholder para @extend)
+%btn {
+  @include button-base;
+}
+
+// Botón primario
+.btn-primary {
+  @extend %btn;
+  background: $color-acento;
+  color: #000;
+
+  &:hover {
+    @include hover-lift;
+    box-shadow: $shadow-lg;
+    text-decoration: none;
+    color: #000;
+  }
+}
+
+// Botón CTA con gradiente
+.cta__button {
+  @extend %btn;
+  background: linear-gradient(135deg, $color-acento 0%, #1e90ff 50%, #00bfff 100%);
+  color: #000;
+  padding: ($spacing-sm + 2px) ($spacing-2xl + 2px); // Operador SASS
+  background-size: 200% 200%;
+  animation: gradientShift 3s ease infinite;
+
+  &:hover {
+    @include hover-lift;
+    box-shadow: $shadow-lg;
+    text-decoration: none;
+    color: #000;
+    background-position: right center;
+  }
+}
+
+// Botón de formulario con gradiente
+.form__button {
+  @extend %btn;
+  background: linear-gradient(135deg, $color-acento 0%, #1e90ff 50%, #00bfff 100%);
+  color: #000;
+  padding: ($spacing-sm + 2px) ($spacing-xl + 4px);
+  margin-top: $spacing-md;
+  width: 100%;
+  background-size: 200% 200%;
+  animation: gradientShift 3s ease infinite;
+
+  @include respond-to('md') {
+    width: auto;
+  }
+
+  &:hover {
+    @include hover-lift;
+    box-shadow: $shadow-lg;
+    background-position: right center;
+  }
+}
+
+// Botón flotante WhatsApp
+.whatsapp-btn {
+  @include floating-button(90px, 20px);
+  @include flex-center;
+  width: 56px;
+  height: 56px;
+  background: $color-success;
+  border-radius: $radius-full;
+  color: #fff;
+  font-size: 28px;
+  text-decoration: none;
+  box-shadow: $shadow-whatsapp;
+  @include transition(transform $transition-fast, box-shadow $transition-fast);
+
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: $shadow-whatsapp-hover;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  &:focus {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+  }
+
+  &__icon {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+// Botón base genérico
+button {
+  background: $color-acento;
+  color: #000;
+  text-transform: uppercase;
+  cursor: pointer;
+  @include transition(background $transition-fast);
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

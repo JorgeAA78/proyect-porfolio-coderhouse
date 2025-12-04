@@ -1,0 +1,114 @@
+// ============================================
+// LAYOUT: FOOTER
+// ============================================
+@use '../abstracts' as *;
+
+.footer {
+  background: $color-footer-bg;
+  padding: $spacing-2xl $spacing-lg;
+  color: $color-footer-text;
+  border-top: 1px solid $color-border;
+  margin-top: 0;
+
+  &__container {
+    @include container;
+    @include flex-column($spacing-md);
+    align-items: center;
+
+    @include respond-to('md') {
+      @include flex-row($spacing-lg);
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__logo {
+    height: 35px;
+    width: auto;
+    object-fit: contain;
+
+    @include respond-to('md') {
+      flex: 1;
+    }
+  }
+
+  &__social {
+    @include flex-row($spacing-lg);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+
+    @include respond-to('md') {
+      flex: 1;
+      justify-content: center;
+    }
+  }
+
+  &__social-link {
+    color: $color-footer-text;
+    font-size: $font-size-lg;
+    text-decoration: none;
+    @include flex-center;
+    @include transition(color $transition-base, transform $transition-fast);
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $color-acento;
+      transform: translateY(-2px);
+      @include focus-visible;
+    }
+  }
+
+  &__contact {
+    color: $color-footer-text;
+    text-decoration: none;
+    font-size: $font-size-sm;
+    padding-bottom: 2px;
+    @include transition(color $transition-base);
+
+    @include respond-to('md') {
+      flex: 1;
+      text-align: right;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $color-acento;
+      @include focus-visible;
+    }
+  }
+
+  &__text {
+    color: $color-footer-muted;
+    font-size: $font-size-xs;
+    text-align: center;
+    margin: 0;
+  }
+}
+
+// Generación dinámica de colores para redes sociales con @each
+@each $network, $color in $social-colors {
+  .social--#{$network} {
+    &:hover,
+    &:focus {
+      color: $color;
+    }
+  }
+}
+
+// Generación de clases de espaciado con @each
+@each $size, $value in $spacing-sizes {
+  .mt-#{$size} {
+    margin-top: $value;
+  }
+  .mb-#{$size} {
+    margin-bottom: $value;
+  }
+  .py-#{$size} {
+    padding-top: $value;
+    padding-bottom: $value;
+  }
+}

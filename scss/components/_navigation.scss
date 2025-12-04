@@ -1,0 +1,56 @@
+// ============================================
+// COMPONENTE: NAVEGACIÓN
+// ============================================
+@use '../abstracts' as *;
+
+// Navegación base
+nav {
+  ul {
+    list-style: none;
+  }
+
+  li {
+    display: inline;
+
+    & + li::before {
+      content: " · ";
+      color: $color-muted;
+    }
+  }
+
+  a[aria-current="page"] {
+    font-weight: $font-weight-bold;
+    text-decoration: none;
+  }
+}
+
+// Navegación con clases BEM
+.nav {
+  &__list {
+    list-style: none;
+  }
+
+  &__item {
+    display: inline;
+
+    & + .nav__item::before {
+      content: " · ";
+      color: $color-muted;
+    }
+  }
+
+  &__link {
+    color: $color-acento;
+    text-decoration: underline;
+    @include transition(color $transition-fast);
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    &[aria-current="page"] {
+      font-weight: $font-weight-bold;
+      text-decoration: none;
+    }
+  }
+}

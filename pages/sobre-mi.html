@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="es">
 
+<!-- ==================== HEAD ==================== -->
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,14 +15,16 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <!-- CSS -->
-    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
     <!-- Font Awesome para iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+<!-- ==================== FIN HEAD ==================== -->
 
 <body class="body">
+    <!-- ==================== INICIO HEADER ==================== -->
     <header class="header">
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
@@ -47,33 +51,62 @@
             <h1 class="header__title">Sobre mí</h1>
         </div>
     </header>
+    <!-- ==================== FIN HEADER ==================== -->
 
+    <!-- ==================== INICIO MAIN ==================== -->
     <main class="main">
         <article class="profile" aria-labelledby="perfil-titulo">
-            <figure class="profile__figure text-center mb-4">
-                <img src="../assets/img/profilejor.jpeg" alt="Jorge Altamirano" class="profile__image img-fluid">
-            </figure>
-            <h2 id="perfil-titulo" class="profile__title">Perfil</h2>
-            <p class="profile__text">
-                Soy desarrollador orientado a buenas prácticas, semántica y accesibilidad.
-                Me interesa el rendimiento y la claridad del código.
-            </p>
+            <!-- Wrapper para Flexbox -->
+            <div class="profile__content-wrapper">
+                <figure class="profile__figure text-center">
+                    <img src="../assets/img/profilejor.jpeg" alt="Jorge Altamirano" class="profile__image img-fluid">
+                </figure>
+                <div class="profile__info">
+                    <h2 id="perfil-titulo" class="profile__title">Perfil</h2>
+                    <p class="profile__text">
+                        Soy desarrollador web orientado a buenas prácticas, semántica y accesibilidad.
+                        Me interesa el rendimiento y la claridad del código. Trabajo con HTML5, CSS3
+                        y metodologías modernas de maquetado.
+                    </p>
+                    <p class="profile__text">
+                        Mi objetivo es crear sitios web que sean accesibles para todos los usuarios,
+                        optimizados para buscadores y con una experiencia de usuario fluida.
+                    </p>
+                </div>
+            </div>
 
+            <!-- Seccion Formacion -->
             <section class="profile__section" aria-labelledby="formacion-titulo">
                 <h3 id="formacion-titulo" class="profile__subtitle">Formación</h3>
                 <ul class="profile__list">
-                    <li>Curso de Desarrollo Web CoderHouse</li>
-                    <li>HTML y CSS-buenas prácticas</li>
+                    <li>Curso de Desarrollo Web - CoderHouse (2025)</li>
+                    <li>HTML5 y CSS3 - Buenas prácticas</li>
+                    <li>Diseño Responsivo y Mobile First</li>
+                    <li>Accesibilidad Web </li>
                 </ul>
             </section>
 
+            <!-- Seccion Experiencia -->
+            <section class="profile__section" aria-labelledby="experiencia-titulo">
+                <h3 id="experiencia-titulo" class="profile__subtitle">Experiencia</h3>
+                <ul class="profile__list">
+                    <li>Desarrollo de sitios institucionales para pymes</li>
+                    <li>Maquetado de landing pages</li>
+                    <li>Optimización de rendimiento web</li>
+                </ul>
+            </section>
+
+            <!-- Seccion Valores -->
             <section class="profile__section" aria-labelledby="valores-titulo">
                 <h3 id="valores-titulo" class="profile__subtitle">Valores</h3>
-                <p>Transparencia, responsabilidad y foco en el usuario.</p>
+                <p>Transparencia, responsabilidad y foco en el usuario. Creo en el trabajo colaborativo
+                    y en la mejora continua de mis habilidades.</p>
             </section>
         </article>
     </main>
+    <!-- ==================== FIN MAIN ==================== -->
 
+    <!-- ==================== INICIO FOOTER ==================== -->
     <footer class="footer">
         <div class="footer__container">
             <img src="../assets/img/logo negro.png" alt="Jorge Altamirano Logo" class="footer__logo">
@@ -102,6 +135,9 @@
         <p class="footer__text">&copy; <time datetime="2025">2025</time> Jorge Altamirano. Todos los derechos
             reservados.</p>
     </footer>
+    <!-- ==================== FIN FOOTER ==================== -->
+
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>

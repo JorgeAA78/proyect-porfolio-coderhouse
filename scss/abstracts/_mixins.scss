@@ -1,0 +1,175 @@
+// ============================================
+// MIXINS SASS
+// ============================================
+@use 'variables' as *;
+
+// Mixin para media queries responsive
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == 'sm' {
+    @media (min-width: $breakpoint-sm) { @content; }
+  } @else if $breakpoint == 'md' {
+    @media (min-width: $breakpoint-md) { @content; }
+  } @else if $breakpoint == 'lg' {
+    @media (min-width: $breakpoint-lg) { @content; }
+  } @else if $breakpoint == 'xl' {
+    @media (min-width: $breakpoint-xl) { @content; }
+  }
+}
+
+// Mixin para flexbox centrado
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Mixin para flexbox columna
+@mixin flex-column($gap: 0) {
+  display: flex;
+  flex-direction: column;
+  @if $gap != 0 {
+    gap: $gap;
+  }
+}
+
+// Mixin para flexbox fila
+@mixin flex-row($gap: 0) {
+  display: flex;
+  flex-direction: row;
+  @if $gap != 0 {
+    gap: $gap;
+  }
+}
+
+// Mixin para grid
+@mixin grid($columns: 1, $gap: $spacing-lg) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  gap: $gap;
+}
+
+// Mixin para transiciones
+@mixin transition($properties...) {
+  transition: $properties;
+}
+
+// Mixin para hover con transformación
+@mixin hover-lift($distance: -2px) {
+  &:hover {
+    transform: translateY($distance);
+  }
+}
+
+// Mixin para hover con escala
+@mixin hover-scale($scale: 1.05) {
+  &:hover {
+    transform: scale($scale);
+  }
+}
+
+// Mixin para botones base
+@mixin button-base {
+  display: inline-block;
+  padding: $spacing-sm $spacing-xl;
+  border: none;
+  border-radius: $radius-sm;
+  font-weight: $font-weight-bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  @include transition(transform $transition-fast, box-shadow $transition-fast);
+}
+
+// Mixin para contenedor centrado
+@mixin container($max-width: $container-lg) {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 $spacing-lg;
+}
+
+// Mixin para tarjetas
+@mixin card-base {
+  background: $color-fondo;
+  padding: $spacing-lg;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-md;
+  @include transition(transform $transition-base, box-shadow $transition-base);
+}
+
+// Mixin para truncar texto
+@mixin text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// Mixin para aspect ratio
+@mixin aspect-ratio($width, $height) {
+  aspect-ratio: $width / $height;
+  object-fit: cover;
+}
+
+// Mixin para posición fixed flotante
+@mixin floating-button($bottom: 20px, $right: 20px) {
+  position: fixed;
+  bottom: $bottom;
+  right: $right;
+  z-index: $z-index-fixed;
+}
+
+// Mixin para focus accesible
+@mixin focus-visible {
+  &:focus {
+    outline: 2px solid $color-acento;
+    outline-offset: 4px;
+  }
+}
+
+// Mixin para animación de entrada
+@mixin animate-fade-in($duration: 0.5s) {
+  animation: fadeIn $duration ease-in-out;
+}
+
+// Keyframes para animaciones
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

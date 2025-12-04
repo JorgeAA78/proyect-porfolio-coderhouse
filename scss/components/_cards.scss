@@ -1,0 +1,93 @@
+// ============================================
+// COMPONENTE: TARJETAS
+// ============================================
+@use '../abstracts' as *;
+
+// Placeholder para tarjetas base
+%card-base {
+  @include card-base;
+}
+
+// Tarjeta de proyecto
+.project__figure {
+  @extend %card-base;
+  @include flex-column($spacing-md);
+  padding: $spacing-lg;
+  border-radius: $radius-xl;
+
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba($color-acento, 0.4);
+  }
+}
+
+// Imagen de proyecto
+.project__image {
+  width: 100%;
+  max-height: 350px;
+  object-fit: cover;
+  border-radius: $radius-md;
+}
+
+// Caption de proyecto
+.project__caption {
+  color: $color-muted;
+  font-size: $font-size-md;
+  text-align: center;
+}
+
+// Tarjetas de habilidades
+.skills {
+  margin: $spacing-4xl 0;
+  padding: $spacing-2xl 0;
+
+  .container {
+    max-width: $container-sm;
+  }
+
+  .card {
+    margin-bottom: $spacing-2xl + 2px; // Operador SASS
+    padding: ($spacing-sm + 2px) $spacing-md;
+
+    @include respond-to('md') {
+      margin-bottom: $spacing-md;
+    }
+  }
+}
+
+// Grid de habilidades
+.skills__grid {
+  @include grid(1, $spacing-xl);
+  justify-items: center;
+  align-items: stretch;
+  padding: $spacing-lg 0;
+
+  @include respond-to('md') {
+    @include grid(3, $spacing-2xl + 2px);
+    justify-items: stretch;
+
+    .card {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.skills__title {
+  font-weight: $font-weight-bold;
+}
+
+.skills__list {
+  list-style: disc;
+}
+
+.skills__item {
+  color: $color-tinta;
+}
+
+// Tarjeta de servicio
+.service__item {
+  @extend %card-base;
+  padding: $spacing-lg ($spacing-lg - 2px);
+  text-align: left;
+  animation: fadeIn 0.5s ease-in-out;
+}

@@ -1,0 +1,48 @@
+// ============================================
+// TIPOGRAFÍA BASE
+// ============================================
+@use '../abstracts' as *;
+
+// Encabezados
+h1,
+h2,
+h3 {
+  color: $color-tinta;
+  font-weight: $font-weight-bold;
+}
+
+// Subtítulos
+.subtitulo {
+  color: $color-muted;
+  font-style: italic;
+}
+
+// Énfasis
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: $font-weight-bold;
+}
+
+// Enlaces base
+a {
+  color: $color-acento;
+  text-decoration: underline;
+  @include transition(color $transition-fast);
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+// Figuras y captions
+figure {
+  text-align: center;
+}
+
+figcaption {
+  color: $color-muted;
+  font-size: $font-size-md;
+}
